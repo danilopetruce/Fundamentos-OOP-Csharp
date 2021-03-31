@@ -12,6 +12,6 @@ namespace Balta.SubscriptionContext
 
     public IList<Subscription> Subscriptions { get; set; }
 
-    public bool IsPremium => Subscriptions.Any(x => x.IsInactive);
+    public bool IsPremium => Subscriptions.Any(x => !x.IsInactive);
   }
 }
